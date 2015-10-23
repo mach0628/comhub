@@ -1,0 +1,42 @@
+多串口集成器
+1. 同时操作多个串口，仅支持简单模式，主要针对交换机或者路由的console
+2. 支持linux和windows
+3. 支持键盘输入控制
+4. 支持简化Telnet连接控制
+5. 支持脚本输入
+6. 支持后台日志保存
+控制命令：
+help/?                                help
+quit/bye/exit                         退出当前连接
+list/ls/dir io/user/sh [start] [end]  指定范围的串口或者连接列表
+set mode +/- character                设置当前连接的特征 , '+' 表示增加 , '-' 表示删除
+                                        可有的特征:
+                                         silent: 只接收当前串口
+                                         quick:  快速模式，输入立刻写入当前串口，不经过解释器
+                                         cr:     在快速模式下，在行尾强制改成cr
+                                         lf:     在快速模式下，在行尾强制改成lf
+set unlock io/user index              清除连接的当前串口或者清除串口的当前使用者
+set timeout  number number            设置连接的两个超时值,如果为-1表示不设置
+select index/name                     设置连接的当前串口 , 序号和名字是在串口列表中
+cat index/name                        设置连接的当前串口 , 序号和名字是在串口列表中
+write/out string                      往当前串口写入字符串，字符串的表达见后
+write/out break                       发送BREAK信号到当前串口
+write/out return                      发送CRLF到当前串口
+sh stop                               停止脚本运行
+sh start                              启动脚本运行
+sh clear                              清除脚本（内存）
+sh add string                         往脚本中添加一条命令
+sh list                               执行的命令列表
+字符串表示:
+\r  CR
+\n  LF
+\t  TAB
+\c[           CTRL+]
+\c/           CTRL+/
+\c]           CTRL+]
+\c^           CTRL+^
+\c_           CTRL+ '_'
+\cA -- \cZ    CTRL+ A ---- CTRL+Z
+
+编译：
+     在windows下，工程文件是comhub.vcproj,vs2005; 在linux下，把所有文件放在一个目录下，除了getopt.cpp，执行make编译，需要gcc。

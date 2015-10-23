@@ -1,0 +1,43 @@
+Coms Hub
+1. support multiple serial operator £¬it is used for console of switch or router etc.
+2. run under linux or windows
+3. support keyboad control
+4. support simple Telnet control
+5. support file input
+6. support log to file background
+control command is following£º
+help/?                                help
+quit/bye/exit                         exit current user
+list/ls/dir io/user/sh [start] [end]  list io or user from start to end
+set mode +/- character                set user mode , '+' indicate set character , '-' indicate clear character
+                                        character can be:
+                                         silent: only receive msg from catched serial
+                                         quick:  quick write mode, receive from user,and sent to catched serial directly
+                                         cr:     cr at line end on quick mode
+                                         lf:     lf at line end on quick mode
+set unlock io/user index              clear lock object of io/user
+set timeout  number number            set user two timeout value,if number less zero,ingored
+select index/name                     set currnet io object , index is number in io list, name is string of io object
+cat index/name                        set currnet io object , index is number in io list, name is string of io object
+write/out string                      send string to current io
+write/out break                       send break to current io
+write/out return                      send CRLF to current io
+sh stop                               stop script running
+sh start                              start script
+sh clear                              clear script content
+sh add string                         add command to script
+sh list                               list command in script
+string:
+\r  CR
+\n  LF
+\t  TAB
+\c[           CTRL+]
+\c/           CTRL+/
+\c]           CTRL+]
+\c^           CTRL+^
+\c_           CTRL+ '_'
+\cA -- \cZ    CTRL+ A ---- CTRL+Z
+
+Build:
+   used comhub.vcproj for vs2005 under windows;
+   under linux , put all file but  getopt.cpp into  Working directory, and run make command. need gcc support

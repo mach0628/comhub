@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "comhub", "comhub.vcproj", "{FEC419F0-1E71-4977-95B4-31C46B41C8AF}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEC419F0-1E71-4977-95B4-31C46B41C8AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FEC419F0-1E71-4977-95B4-31C46B41C8AF}.Debug|Win32.Build.0 = Debug|Win32
+		{FEC419F0-1E71-4977-95B4-31C46B41C8AF}.Release|Win32.ActiveCfg = Release|Win32
+		{FEC419F0-1E71-4977-95B4-31C46B41C8AF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
